@@ -1,0 +1,45 @@
+<?php
+
+
+
+
+print("Welcome to the Brain Games!\n"); 
+$name = readline("May I have your name?");
+print("Hello, " . $name . "!\n");
+print("What number is missing in the progression? \n ");
+$count = 0;
+
+while ($count<3) {
+	 $r1 = rand(5, 15);
+	 $r2 = rand(1, 4);
+	 	 $r3 = rand(1, 9);
+	$mas[] = $r1;
+	for ($i=0; $i<10; $i++){
+        $r1 += $r2;
+		$mas[] = $r1;
+	}
+	print("Question: ");
+	for ($i=0; $i<10; $i++){
+		 if ($i === $r3){
+       	   print('.. ');
+       	   continue;
+       }
+       print($mas[$i] . " ");
+
+	}
+	$correctanswer =  $mas[$r3];
+	print("\n");
+	$answer = readline("Your answer: ");
+	$answer = (int) $answer;
+	if ($answer !== $correctanswer) {
+	    print("'{$answer}' is wrong answer ;(. Correct answer was '{$correctanswer}'. Let's try again, " . $name . "!");
+	    return;
+	} else if ($answer ===  $correctanswer) {
+	    print("Correct!\n");
+	    $count++;
+	}
+}
+ print("Congratulations, {$name}!");
+
+
+?>
