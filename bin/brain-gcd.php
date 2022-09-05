@@ -31,7 +31,7 @@ while ($count<3) {
 	$answer = (int) $answer;
 	if ($answer !== $correctanswer) {
 	    print("'{$answer}' is wrong answer ;(. Correct answer was '{$correctanswer}'. Let's try again, " . $name . "!");
-	    return;
+	     die;
 	} else if ($answer ===  $correctanswer) {
 	    print("Correct!\n");
 	    $count++;
