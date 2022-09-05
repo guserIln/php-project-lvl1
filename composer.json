@@ -1,5 +1,5 @@
 {
-  "name": "hexlet/php-package",
+  "name": "hexlet/code",
   "bin": ["bin/php-package"],
   "type": "library",
   "authors": [
@@ -8,7 +8,7 @@
       "email": "mokevnin@gmail.com"
     }
   ],
-  "description": "hexlet php-package",
+  "description": "hexlet code",
   "license": "MIT",
   "scripts": {
     "test": "phpunit tests"
